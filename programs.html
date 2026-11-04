@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programs | Homalco Aboriginal Guardians</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f7f4;
+            color: #333;
+        }
+        h1 {
+            color: #1b3b2b;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        nav li a {
+            text-decoration: none;
+            color: #2b5c40;
+            font-weight: bold;
+        }
+        nav li a:hover {
+            text-decoration: underline;
+        }
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .program-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left: 5px solid #2b5c40;
+        }
+        .program-card h3 {
+            margin-top: 0;
+            color: #1b3b2b;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #2b5c40;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Homalco Guardian Programs</h1>
+    <p>Explore the core stewardship and monitoring programs carried out by the Homalco Aboriginal Guardians.</p>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="initiatives.html">Initiatives</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="programs-grid">
+            <div class="program-card">
+                <h3>Marine & Underwater Drone Surveys</h3>
+                <p>Deploying remote-operated underwater vehicles (ROVs) to monitor sea sponge reefs, assess water quality, and protect fragile marine ecosystems across Bute Inlet.</p>
+            </div>
+            
+            <div class="program-card">
+                <h3>Salmon & Fisheries Stewardship</h3>
+                <p>Conducting vital fieldwork to track salmon returns, monitor spawning habitats, and safeguard aquatic life within traditional Homalco waters.</p>
+            </div>
+
+            <div class="program-card">
+                <h3>Cultural Heritage Protection</h3>
+                <p>Documenting, mapping, and protecting ancient village sites, culturally modified trees (CMTs), and sacred areas for future generations.</p>
+            </div>
+        </div>
+    </section>
+
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+</body>
+</html>
