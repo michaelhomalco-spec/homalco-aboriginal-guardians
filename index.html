@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Homalco Aboriginal Guardians</title>
     <style>
-        /* 1. Reset & Global Styles */
+        /* 1. Global Styles & Reset */
         *, *::before, *::after {
             box-sizing: border-box;
         }
@@ -40,7 +40,7 @@
             margin-top: 0;
         }
 
-        /* 2. Navigation */
+        /* 2. Navigation Bar */
         nav ul {
             list-style-type: none;
             padding: 0;
@@ -65,7 +65,7 @@
             border-bottom: 2px solid #2b5c40;
         }
 
-        /* 3. Hero Section */
+        /* 3. Hero Showcase Section */
         .hero {
             background-color: #1b3b2b;
             color: white;
@@ -126,7 +126,7 @@
             color: #1b3b2b;
         }
 
-        /* 4. Section Titles */
+        /* 4. Section Headers & Cards */
         .section-title {
             color: #1b3b2b;
             font-size: 1.5rem;
@@ -135,7 +135,6 @@
             padding-left: 12px;
         }
 
-        /* 5. Core Pillars Grid */
         .pillars-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -162,7 +161,7 @@
             margin-bottom: 0;
         }
 
-        /* 6. Call to Action Box */
+        /* 5. Call to Action Banner */
         .cta-banner {
             background-color: #e2ede6;
             border-left: 5px solid #2b5c40;
@@ -186,23 +185,13 @@
             color: #333;
         }
 
-        /* 7. Footer */
+        /* 6. Footer */
         footer {
             border-top: 1px solid #d1dcd4;
             padding-top: 20px;
             text-align: center;
             color: #666;
             font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #2b5c40;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
@@ -235,4 +224,38 @@
             </section>
 
             <!-- Core Stewardship Pillars -->
-            <h
+            <h2 class="section-title">Stewardship Focus Areas</h2>
+            <section class="pillars-grid">
+                <article class="pillar-card">
+                    <h3>Marine & Fisheries Operations</h3>
+                    <p>Monitoring salmon escapement, conducting underwater ROV surveys of glass sponge reefs, and maintaining seasonal marine vessel patrols throughout Bute Inlet.</p>
+                </article>
+
+                <article class="pillar-card">
+                    <h3>Land & Wildlife Protection</h3>
+                    <p>Conducting habitat assessments, stream surveys, and land monitoring to protect native species, watersheds, and ecosystems across traditional territory.</p>
+                </article>
+
+                <article class="pillar-card">
+                    <h3>Cultural & Heritage Preservation</h3>
+                    <p>Cataloging Culturally Modified Trees (CMTs), historical village sites, and ancient heritage places to preserve Indigenous cultural history for community members.</p>
+                </article>
+            </section>
+
+            <!-- Community Call to Action -->
+            <section class="cta-banner">
+                <div>
+                    <h3>Have an environmental observation or report?</h3>
+                    <p>Reach out to the Guardian team to report wildlife sightings, ecosystem changes, or general community inquiries.</p>
+                </div>
+                <a href="contact.html" class="btn-primary">Get in Touch</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>© Homalco First Nation Aboriginal Guardians. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
