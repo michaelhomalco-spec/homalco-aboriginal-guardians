@@ -221,3 +221,131 @@ footer p {
     display: block;
     font-size: 1.05rem;
 }
+
+/* Initiatives Grid & Meta Styling Extensions */
+.initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card-meta {
+    font-size: 0.88rem;
+    color: var(--slate-dark);
+    border-top: 1px solid var(--soft-moss);
+    padding-top: 12px;
+    margin-top: 15px;
+}
+
+.card-meta span {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.card-meta strong {
+    color: var(--forest-green);
+}
+
+/* Contact Page Layout & Form Extensions */
+.contact-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 1rem;
+}
+
+.info-card {
+    background-color: var(--forest-green);
+    color: #ffffff;
+    border-left: 5px solid var(--cedar-wood);
+    flex: 1;
+    min-width: 280px;
+    margin-bottom: 0;
+}
+
+.info-card h2 {
+    color: #ffffff;
+    border-bottom: 2px solid var(--deep-teal);
+}
+
+.info-card p {
+    margin: 12px 0;
+}
+
+.info-card a {
+    color: #9fe2b6;
+    text-decoration: none;
+}
+
+.info-card a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.contact-form-card {
+    flex: 2;
+    min-width: 300px;
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--forest-green);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--soft-moss);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--deep-teal);
+    box-shadow: 0 0 0 3px rgba(34, 77, 71, 0.15);
+}
+
+button[type="submit"] {
+    background-color: var(--deep-teal);
+    color: #ffffff;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--forest-green);
+}
