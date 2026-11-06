@@ -2,96 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programs | Homalco Aboriginal Guardians</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f7f4;
-            color: #333;
-        }
-        h1 {
-            color: #1b3b2b;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-        nav li a {
-            text-decoration: none;
-            color: #2b5c40;
-            font-weight: bold;
-        }
-        nav li a:hover {
-            text-decoration: underline;
-        }
-        .programs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .program-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border-left: 5px solid #2b5c40;
-        }
-        .program-card h3 {
-            margin-top: 0;
-            color: #1b3b2b;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #2b5c40;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <!-- Link element loading your external style sheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Homalco Guardian Programs</h1>
-    <p>Explore the core stewardship and monitoring programs carried out by the Homalco Aboriginal Guardians.</p>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="programs.html">Programs</a></li>
-            <li><a href="initiatives.html">Initiatives</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>Homalco Guardian Programs</h1>
+        <p>Exploring core stewardship, environmental monitoring, and cultural preservation initiatives led by the Homalco Aboriginal Guardians across traditional lands and waters.</p>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="initiatives.html">Initiatives</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section>
+    <main>
         <div class="programs-grid">
-            <div class="program-card">
-                <h3>Marine & Underwater Drone Surveys</h3>
-                <p>Deploying remote-operated underwater vehicles (ROVs) to monitor sea sponge reefs, assess water quality, and protect fragile marine ecosystems across Bute Inlet.</p>
-            </div>
             
-            <div class="program-card">
-                <h3>Salmon & Fisheries Stewardship</h3>
-                <p>Conducting vital fieldwork to track salmon returns, monitor spawning habitats, and safeguard aquatic life within traditional Homalco waters.</p>
-            </div>
+            <!-- Program 1 -->
+            <section class="program-card">
+                <div>
+                    <span class="badge">Marine Conservation</span>
+                    <h3>Marine & Underwater Drone Surveys</h3>
+                    <p>Utilizing high-definition remote-operated underwater vehicles (ROVs) to conduct deep-water ecological mapping and monitor marine habitat health across Bute Inlet.</p>
+                    
+                    <ul class="highlights">
+                        <li>Glass sponge reef mapping & monitoring</li>
+                        <li>Water quality sampling & turbidity tracking</li>
+                        <li>Benthic habitat & invasive species assessment</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <div class="card-stats">
+                        <div><strong>150+ Sq KM</strong> Monitored</div>
+                        <div><strong>ROV Tech</strong> Deep Water</div>
+                    </div>
+                    <a href="initiatives.html#marine">Learn More</a>
+                </div>
+            </section>
 
-            <div class="program-card">
-                <h3>Cultural Heritage Protection</h3>
-                <p>Documenting, mapping, and protecting ancient village sites, culturally modified trees (CMTs), and sacred areas for future generations.</p>
-            </div>
+            <!-- Program 2 -->
+            <section class="program-card">
+                <div>
+                    <span class="badge">Fisheries & Habitat</span>
+                    <h3>Salmon & Fisheries Stewardship</h3>
+                    <p>Conducting field research and habitat restoration to protect wild salmon stocks, monitor spawning rivers, and uphold sustainable harvest practices in traditional waters.</p>
+                    
+                    <ul class="highlights">
+                        <li>Escapement counts for Chum, Coho, & Chinook</li>
+                        <li>Stream health & stream bed restoration</li>
+                        <li>Co-management data collection with Fisheries & Oceans</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="card-stats">
+                        <div><strong>5 Rivers</strong> Monitored</div>
+                        <div><strong>Annual</strong> Stock Tracking</div>
+                    </div>
+                    <a href="initiatives.html#fisheries">Learn More</a>
+                </div>
+            </section>
+
+            <!-- Program 3 -->
+            <section class="program-card">
+                <div>
+                    <span class="badge">Cultural Stewardship</span>
+                    <h3>Cultural Heritage Protection</h3>
+                    <p>Mapping, documenting, and safeguarding sacred sites, ancestral villages, and Culturally Modified Trees (CMTs) to ensure protection for future generations.</p>
+                    
+                    <ul class="highlights">
+                        <li>GIS mapping of historic site boundaries</li>
+                        <li>CMT identification & timber block surveys</li>
+                        <li>Oral history integration with archaeological data</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="card-stats">
+                        <div><strong>100+ Sites</strong> Documented</div>
+                        <div><strong>GIS</strong> Spatial Tracking</div>
+                    </div>
+                    <a href="initiatives.html#heritage">Learn More</a>
+                </div>
+            </section>
+
         </div>
-    </section>
+    </main>
 
-    <a href="index.html" class="back-link">← Back to Home</a>
+    <footer>
+        <p>© Homalco First Nation Aboriginal Guardians. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>

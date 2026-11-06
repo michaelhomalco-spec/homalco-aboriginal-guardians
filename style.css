@@ -161,3 +161,63 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* Programs Grid & Card Layout Extensions */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 1rem;
+}
+
+.program-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--soft-moss);
+    color: var(--forest-green);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.highlights {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.highlights li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--soft-moss);
+    padding-top: 12px;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--slate-dark);
+}
+
+.card-stats strong {
+    color: var(--forest-green);
+    display: block;
+    font-size: 1.05rem;
+}
