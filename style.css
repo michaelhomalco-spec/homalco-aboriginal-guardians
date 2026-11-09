@@ -15,10 +15,10 @@
 /* Base Page & Typography Styles */
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 16px;
+    font-size: 18px; /* Increased from 16px for improved readability */
     font-style: normal;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.7; /* Generous line height for larger text */
     color: var(--slate-dark);
     background-color: var(--mist-gray);
     margin: 0;
@@ -37,7 +37,7 @@ header {
 header h1 {
     font-family: 'Cinzel', serif;
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: 2.7rem; /* Scaled up from 2.4rem */
     margin: 0 0 0.5rem 0;
     letter-spacing: 1px;
 }
@@ -46,7 +46,7 @@ header p {
     max-width: 700px;
     margin: 0 auto 1.5rem auto;
     color: #d1e2d9;
-    font-size: 1.05rem;
+    font-size: 1.15rem; /* Scaled up from 1.05rem */
     font-style: italic;
 }
 
@@ -65,6 +65,7 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.05rem; /* Increased for navbar readability */
     padding: 8px 16px;
     border-radius: 4px;
     background-color: var(--deep-teal);
@@ -93,7 +94,7 @@ section {
 
 h2 {
     font-family: 'Cinzel', serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem; /* Scaled up from 1.6rem */
     font-weight: 600;
     color: var(--forest-green);
     margin-top: 0;
@@ -102,7 +103,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.25rem;
+    font-size: 1.35rem; /* Scaled up from 1.25rem */
     font-weight: 700;
     color: var(--cedar-wood);
     margin-top: 1.5rem;
@@ -130,6 +131,7 @@ section > a[href] {
     margin-right: 10px;
     margin-top: 10px;
     font-weight: 600;
+    font-size: 1.05rem;
     transition: background-color 0.3s ease;
 }
 
@@ -154,7 +156,7 @@ footer {
     text-align: center;
     padding: 1.5rem 1rem;
     margin-top: 3rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem; /* Increased slightly for footer */
     border-top: 4px solid var(--cedar-wood);
 }
 
@@ -187,7 +189,7 @@ footer p {
     display: inline-block;
     background-color: var(--soft-moss);
     color: var(--forest-green);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
     padding: 4px 10px;
@@ -203,7 +205,7 @@ footer p {
 
 .highlights li {
     margin-bottom: 6px;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .card-stats {
@@ -212,14 +214,14 @@ footer p {
     border-top: 1px solid var(--soft-moss);
     padding-top: 12px;
     margin-top: 15px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--slate-dark);
 }
 
 .card-stats strong {
     color: var(--forest-green);
     display: block;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 /* Initiatives Grid & Meta Styling Extensions */
@@ -244,7 +246,7 @@ footer p {
 }
 
 .card-meta {
-    font-size: 0.88rem;
+    font-size: 0.92rem;
     color: var(--slate-dark);
     border-top: 1px solid var(--soft-moss);
     padding-top: 12px;
@@ -320,7 +322,7 @@ footer p {
     padding: 10px 12px;
     border: 1px solid var(--soft-moss);
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-family: inherit;
     background-color: #ffffff;
     box-sizing: border-box;
@@ -340,7 +342,7 @@ button[type="submit"] {
     padding: 12px 22px;
     border: none;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
