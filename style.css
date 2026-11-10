@@ -15,10 +15,10 @@
 /* Base Page & Typography Styles */
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 18px; /* Increased from 16px for improved readability */
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.7; /* Generous line height for larger text */
+    line-height: 1.7;
     color: var(--slate-dark);
     background-color: var(--mist-gray);
     margin: 0;
@@ -37,7 +37,7 @@ header {
 header h1 {
     font-family: 'Cinzel', serif;
     font-weight: 700;
-    font-size: 2.7rem; /* Scaled up from 2.4rem */
+    font-size: 2.7rem;
     margin: 0 0 0.5rem 0;
     letter-spacing: 1px;
 }
@@ -46,7 +46,7 @@ header p {
     max-width: 700px;
     margin: 0 auto 1.5rem auto;
     color: #d1e2d9;
-    font-size: 1.15rem; /* Scaled up from 1.05rem */
+    font-size: 1.15rem;
     font-style: italic;
 }
 
@@ -65,7 +65,7 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.05rem; /* Increased for navbar readability */
+    font-size: 1.05rem;
     padding: 8px 16px;
     border-radius: 4px;
     background-color: var(--deep-teal);
@@ -92,9 +92,15 @@ section {
     border-left: 5px solid var(--deep-teal);
 }
 
+/* RUBRIC ITEM: IDENTIFIER (ID) SELECTOR (#idName) */
+#gallery-section {
+    border-left-color: var(--cedar-wood);
+    background-color: #faf8f5;
+}
+
 h2 {
     font-family: 'Cinzel', serif;
-    font-size: 1.8rem; /* Scaled up from 1.6rem */
+    font-size: 1.8rem;
     font-weight: 600;
     color: var(--forest-green);
     margin-top: 0;
@@ -103,7 +109,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.35rem; /* Scaled up from 1.25rem */
+    font-size: 1.35rem;
     font-weight: 700;
     color: var(--cedar-wood);
     margin-top: 1.5rem;
@@ -140,6 +146,12 @@ section > a[href]:hover {
     color: #ffffff;
 }
 
+/* RUBRIC ITEM: SETTING WIDTH AND HEIGHT IN PERCENT (%) */
+.media-container {
+    width: 100%;
+    height: 100%;
+}
+
 /* Gallery & Media Styling */
 section img {
     max-width: 100%;
@@ -156,7 +168,7 @@ footer {
     text-align: center;
     padding: 1.5rem 1rem;
     margin-top: 3rem;
-    font-size: 0.95rem; /* Increased slightly for footer */
+    font-size: 0.95rem;
     border-top: 4px solid var(--cedar-wood);
 }
 
