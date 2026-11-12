@@ -3,13 +3,13 @@
 
 /* CSS Variables for Nature Palette */
 :root {
-    --forest-green: #11261a; /* Darker, richer forest green for better contrast */
-    --deep-teal: #193833;    /* Enhanced deep teal */
+    --forest-green: #11261a;
+    --deep-teal: #193833;    
     --cedar-wood: #8c5332;
-    --soft-moss: #d9e6de;    /* Softer moss grey for borders */
+    --soft-moss: #d9e6de;    
     --mist-gray: #f4f6f5;
-    --slate-dark: #202624;   /* Polished charcoal */
-    --sand-light: #fbf9f5;   /* Crisp natural off-white */
+    --slate-dark: #202624;   
+    --sand-light: #fbf9f5;   
 }
 
 /* Base Page & Typography Styles */
@@ -34,51 +34,62 @@ body {
     background-size: 55%; 
 }
 
-/* Header & Navigation Styling */
+/* HEADER WITH FACING FISH ARTWORK ON THE SIDES */
 header {
+    position: relative;
     background-color: var(--forest-green);
     
-    /* 
-       Layer 1: Dark fade gradient to keep text readable
-       Layer 2: Left artwork
-       Layer 3: Right artwork 
-    */
+    /* Layer 1: Dark gradient overlay so text remains razor-sharp and readable in the middle */
+    /* Layer 2: Left fish artwork */
+    /* Layer 3: Right fish artwork */
     background-image: 
-        linear-gradient(90deg, rgba(17, 38, 26, 0.2) 0%, rgba(17, 38, 26, 0.95) 15%, rgba(17, 38, 26, 0.95) 85%, rgba(17, 38, 26, 0.2) 100%),
-        url('media/homalco-banner.webp'), 
-        url('media/homalco-banner.webp');
+        linear-gradient(90deg, rgba(17, 38, 26, 0.35) 0%, rgba(17, 38, 26, 0.92) 22%, rgba(17, 38, 26, 0.92) 78%, rgba(17, 38, 26, 0.35) 100%),
+        url('media/Xwemalhkwu-Homalco.png'), 
+        url('media/Xwemalhkwu-Homalco.png');
+        
     background-position: center, left center, right center;
     background-size: cover, contain, contain;
     background-repeat: no-repeat;
     
     color: #ffffff;
-    /* Added slightly more padding to give the artwork breathing room */
-    padding: 2.5rem 1rem 2rem; 
+    padding: 3.5rem 1.5rem 2.5rem;
     text-align: center;
     border-bottom: 5px solid var(--cedar-wood);
+    overflow: hidden;
 }
 
 header h1 {
     font-family: 'Cinzel', serif;
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     margin: 0 0 0.5rem 0;
     letter-spacing: 1.5px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 header p {
     max-width: 680px;
     margin: 0 auto 1.5rem auto;
-    color: #b8cfc2;
-    font-size: 1.1rem;
+    color: #d1e2d9;
+    font-size: 1.15rem;
     font-style: italic;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.7);
 }
 
 /* Navigation Bar */
+nav {
+    position: relative;
+    z-index: 2;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 1rem 0 0 0;
+    margin: 1.25rem 0 0 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -90,7 +101,7 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: 4px;
     background-color: var(--deep-teal);
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -98,77 +109,6 @@ nav a {
 
 nav a:hover, nav a.active {
     background-color: var(--cedar-wood);
-}
-
-/* MODERN HIGH-QUALITY HERO BANNER */
-.hero-banner {
-    position: relative;
-    background-color: var(--forest-green);
-    
-    /* Use the high-quality source artwork on each side */
-    background-image: 
-        url('media/Xwemalhkwu-Homalco.png'), 
-        url('media/Xwemalhkwu-Homalco.png');
-    
-    /* Mirrors & positions the art on left (flipped horizontally) and right */
-    background-position: left center, right center;
-    background-size: contain; 
-    background-repeat: no-repeat;
-    
-    /* Constrained cinematic aspect ratio */
-    width: 100%;
-    height: 380px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-bottom: 4px solid var(--cedar-wood);
-}
-
-/* Adds a gradient "shadow" over the sides to blur into center text on small screens */
-.banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg, 
-        rgba(17, 38, 26, 0.45) 0%, 
-        rgba(17, 38, 26, 0.92) 20%, 
-        rgba(17, 38, 26, 0.92) 80%, 
-        rgba(17, 38, 26, 0.45) 100%
-    );
-    z-index: 1;
-}
-
-/* live, un-distortable banner typography */
-.banner-content {
-    position: relative;
-    z-index: 2;
-    max-width: 750px;
-    padding: 2rem;
-    text-align: center;
-}
-
-.banner-content h2 {
-    font-family: 'Cinzel', serif;
-    color: #ffffff;
-    font-size: 2.2rem;
-    line-height: 1.25;
-    margin-bottom: 0.75rem;
-    border-bottom: none;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
-    letter-spacing: 1px;
-}
-
-.banner-content p {
-    margin: 0;
-    font-size: 1.15rem;
-    font-weight: 500;
-    color: #e2ede7;
-    text-shadow: 0 1px 5px rgba(0,0,0,0.8);
-    line-height: 1.6;
 }
 
 /* Main Content Layout */
@@ -351,6 +291,194 @@ section img {
     font-size: 0.9rem;
 }
 
+/* Initiatives Grid & Meta Styling */
+.initiatives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card-meta {
+    font-size: 0.92rem;
+    color: var(--slate-dark);
+    border-top: 1px solid var(--soft-moss);
+    padding-top: 12px;
+    margin-top: 15px;
+}
+
+.card-meta span {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.card-meta strong {
+    color: var(--forest-green);
+}
+
+/* Contact Page Layout */
+.contact-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 1rem;
+}
+
+.info-card {
+    background-color: var(--forest-green);
+    color: #ffffff;
+    border-left: 5px solid var(--cedar-wood);
+    flex: 1;
+    min-width: 280px;
+    margin-bottom: 0;
+}
+
+.info-card h2 {
+    color: #ffffff;
+    border-bottom: 2px solid var(--deep-teal);
+}
+
+.info-card p {
+    margin: 12px 0;
+}
+
+.info-card a {
+    color: #9fe2b6;
+    text-decoration: none;
+}
+
+.info-card a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.contact-form-card {
+    flex: 2;
+    min-width: 300px;
+    margin-bottom: 0;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--forest-green);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--soft-moss);
+    border-radius: 4px;
+    font-size: 1.05rem;
+    font-family: inherit;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--deep-teal);
+    box-shadow: 0 0 0 3px rgba(34, 77, 71, 0.15);
+}
+
+button[type="submit"] {
+    background-color: var(--deep-teal);
+    color: #ffffff;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--forest-green);
+}
+
+/* Programs Grid */
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 1rem;
+}
+
+.program-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--soft-moss);
+    color: var(--forest-green);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.highlights {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.highlights li {
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--soft-moss);
+    padding-top: 12px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--slate-dark);
+}
+
+.card-stats strong {
+    color: var(--forest-green);
+    display: block;
+    font-size: 1.1rem;
+}
+
 /* Footer */
 footer {
     background-color: var(--slate-dark);
@@ -366,39 +494,14 @@ footer p {
     margin: 0;
 }
 
-/* Responsive banner logic */
+/* Mobile responsive header logic */
 @media (max-width: 768px) {
-    /* Updates the header for mobile screens */
     header {
         background-image: 
             linear-gradient(180deg, rgba(17, 38, 26, 0.95) 0%, rgba(17, 38, 26, 0.95) 75%, rgba(17, 38, 26, 0.2) 100%),
             url('media/Xwemalhkwu-Homalco.png');
         background-position: center, center bottom;
         background-size: cover, 70%;
-        padding-bottom: 4.5rem; /* Space for the artwork under the nav links */
-    }
-
-    .hero-banner {
-        /* On small screens, merge artwork backgrounds to keep text clear */
-        background-image: url('media/Xwemalhkwu-Homalco.png');
-        background-position: center bottom;
-        background-size: 70%; 
-        height: auto;
-        padding-top: 3rem;
-        padding-bottom: 15rem; /* Pushes live text above graphic */
-    }
-    .banner-overlay {
-        background: linear-gradient(
-            180deg, 
-            rgba(17, 38, 26, 0.92) 0%, 
-            rgba(17, 38, 26, 0.92) 40%, 
-            rgba(17, 38, 26, 0.4) 100%
-        );
-    }
-    .banner-content h2 {
-        font-size: 1.75rem;
-    }
-    .banner-content p {
-        font-size: 1rem;
+        padding-bottom: 3.5rem;
     }
 }
