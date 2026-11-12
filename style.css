@@ -94,7 +94,7 @@ nav a:hover, nav a.active {
     background-position: center;
     
     /* Changed from 'cover' to zoom the image out and create a pattern */
-    background-size: 40%; 
+    background-size: 25%; 
     background-repeat: repeat; 
     
     color: #ffffff;
