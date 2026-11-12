@@ -86,40 +86,29 @@ nav a {
 nav a:hover, nav a.active {
     background-color: var(--cedar-wood);
 }
+
 /* Hero Banner Container */
 .hero-banner {
     background-color: var(--forest-green);
     
-    /* Adds a slight dark green tint over the fish so your white text stays readable */
-    background-image: linear-gradient(rgba(27, 59, 43, 0.75), rgba(27, 59, 43, 0.75)), url('media/Xwemalhkwu-Homalco.png');
+    /* Removed the dark gradient so the true colors of the new image show */
+    background-image: url('media/homalco-banner.webp');
     background-position: center;
     
-    /* 'contain' scales the entire artwork to fit inside the banner perfectly */
-    background-size: contain; 
+    /* Cover stretches the image to fit the banner perfectly */
+    background-size: cover; 
     background-repeat: no-repeat;
     
     color: #ffffff;
-    padding: 4rem 1.5rem;
+    /* Added more padding to make the banner taller so the image has room */
+    padding: 10rem 1.5rem; 
     text-align: center;
     border-bottom: 4px solid var(--cedar-wood);
 }
 
 .banner-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.banner-content h2 {
-    color: #ffffff;
-    border-bottom: none;
-    margin-bottom: 0.5rem;
-    font-size: 2.1rem;
-}
-
-.banner-content p {
-    margin: 0;
-    font-size: 1.15rem;
-    color: #e8efe9;
+    /* Hides the HTML text so it doesn't overlap the text in the image */
+    display: none; 
 }
 
 /* Main Content & Section Cards */
