@@ -395,3 +395,16 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: var(--forest-green);
 }
+/* Gallery Grid Layout */
+.media-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.media-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images don't stretch weirdly */
+}
