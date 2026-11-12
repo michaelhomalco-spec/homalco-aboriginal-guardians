@@ -89,18 +89,17 @@ nav a:hover, nav a.active {
 
 /* Hero Banner Container */
 .hero-banner {
-    background-color: var(--forest-green); 
+    /* Updated hex code to match the exact dark green of the image background */
+    background-color: #182a21; 
     
-    background-image: url('media/homalco-banner.webp');
+    background-image: url('media/watermarked_img_6947106339480270823.jpg');
     background-position: center;
     
-    /* Changed from 'cover' to 'contain' to stop the image from cropping */
+    /* Keeps the image fully visible inside the banner without cropping */
     background-size: contain; 
     background-repeat: no-repeat;
     
     color: #ffffff;
-    
-    /* Adjusting this padding controls the overall height of the banner */
     padding: 12rem 1.5rem; 
     text-align: center;
     border-bottom: 4px solid var(--cedar-wood);
@@ -132,7 +131,6 @@ section {
 /* RUBRIC ITEM: IDENTIFIER (ID) SELECTOR (#idName) */
 #gallery-section {
     border-left-color: var(--cedar-wood);
-    /* Slightly opaque to match the new watermark styling */
     background-color: rgba(250, 248, 245, 0.90);
 }
 
