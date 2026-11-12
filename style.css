@@ -75,6 +75,36 @@ nav a {
 nav a:hover, nav a.active {
     background-color: var(--cedar-wood);
 }
+/* Hero Banner Container */
+.hero-banner {
+    background-color: var(--forest-green);
+    background-image: linear-gradient(rgba(27, 59, 43, 0.72), rgba(27, 59, 43, 0.72)), url('media/coastal-bute-inlet.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    border-bottom: 4px solid var(--cedar-wood);
+}
+
+.banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.banner-content h2 {
+    color: #ffffff;
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+    font-size: 2.1rem;
+}
+
+.banner-content p {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #e8efe9;
+}
 
 /* Main Content & Section Cards */
 main {
@@ -127,7 +157,8 @@ a:hover {
 }
 
 /* Call-to-Action Link Buttons */
-section > a[href] {
+section > a[href],
+.program-card a[href] {
     display: inline-block;
     background-color: var(--deep-teal);
     color: #ffffff;
@@ -141,7 +172,8 @@ section > a[href] {
     transition: background-color 0.3s ease;
 }
 
-section > a[href]:hover {
+section > a[href]:hover,
+.program-card a[href]:hover {
     background-color: var(--forest-green);
     color: #ffffff;
 }
