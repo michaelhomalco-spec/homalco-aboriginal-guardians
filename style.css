@@ -3,13 +3,13 @@
 
 /* CSS Variables for Nature Palette */
 :root {
-    --forest-green: #1b3b2b;
-    --deep-teal: #224d47;
+    --forest-green: #11261a; /* Darker, richer forest green for better contrast */
+    --deep-teal: #193833;    /* Enhanced deep teal */
     --cedar-wood: #8c5332;
-    --soft-moss: #e8efe9;
+    --soft-moss: #d9e6de;    /* Softer moss grey for borders */
     --mist-gray: #f4f6f5;
-    --slate-dark: #2c3531;
-    --sand-light: #fdfbf7;
+    --slate-dark: #202624;   /* Polished charcoal */
+    --sand-light: #fbf9f5;   /* Crisp natural off-white */
 }
 
 /* Base Page & Typography Styles */
@@ -22,25 +22,23 @@ body {
     color: var(--slate-dark);
     margin: 0;
     padding: 0;
-
     background-color: var(--mist-gray);
     
-    /* Fades out the logo using an 88% opaque white gradient */
+    /* Subtle watermark for identity */
     background-image: 
-        linear-gradient(rgba(244, 246, 245, 0.88), rgba(244, 246, 245, 0.88)), 
+        linear-gradient(rgba(244, 246, 245, 0.94), rgba(244, 246, 245, 0.94)), 
         url('media/Homalco-logo.png'); 
-        
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed; 
-    background-size: 70%; 
+    background-size: 55%; 
 }
 
-/* Header & Banner Styling */
+/* Header & Navigation Styling */
 header {
     background-color: var(--forest-green);
     color: #ffffff;
-    padding: 2.5rem 1.5rem 1.5rem;
+    padding: 2rem 1rem 1.5rem;
     text-align: center;
     border-bottom: 5px solid var(--cedar-wood);
 }
@@ -48,16 +46,16 @@ header {
 header h1 {
     font-family: 'Cinzel', serif;
     font-weight: 700;
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     margin: 0 0 0.5rem 0;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 header p {
-    max-width: 700px;
+    max-width: 680px;
     margin: 0 auto 1.5rem auto;
-    color: #d1e2d9;
-    font-size: 1.15rem;
+    color: #b8cfc2;
+    font-size: 1.1rem;
     font-style: italic;
 }
 
@@ -65,354 +63,194 @@ header p {
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 1.5rem 0 0 0;
+    margin: 1rem 0 0 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.05rem;
-    padding: 8px 16px;
+    font-size: 0.95rem;
+    padding: 6px 14px;
     border-radius: 4px;
     background-color: var(--deep-teal);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 nav a:hover, nav a.active {
     background-color: var(--cedar-wood);
 }
 
-/* Hero Banner Container */
+/* MODERN HIGH-QUALITY HERO BANNER */
 .hero-banner {
-    background-color: #182a21; 
+    position: relative;
+    background-color: var(--forest-green);
     
-    /* Make sure this matches your actual saved image name exactly */
-    background-image: url('media/homalco-banner.webp'); 
-    background-position: center;
+    /* Use the high-quality source artwork on each side */
+    background-image: 
+        url('media/Xwemalhkwu-Homalco.png'), 
+        url('media/Xwemalhkwu-Homalco.png');
     
-    /* 'cover' is the professional standard. It fills the width perfectly without warping. */
-    background-size: cover; 
+    /* Mirrors & positions the art on left (flipped horizontally) and right */
+    background-position: left center, right center;
+    background-size: contain; 
     background-repeat: no-repeat;
     
-    /* Professional Size Controls: Sleek and constrained */
+    /* Constrained cinematic aspect ratio */
     width: 100%;
-    height: 45vh; /* Takes up exactly 45% of the user's screen height */
-    min-height: 300px; /* Prevents it from getting too tiny on mobile phones */
-    max-height: 450px; /* Caps the height so it never looks massive on desktop monitors */
-    
-    /* We removed the massive 18vw padding and zeroed it out */
-    padding: 0; 
+    height: 380px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     border-bottom: 4px solid var(--cedar-wood);
 }
 
-.banner-content {
-    /* Hides the HTML text so it doesn't overlap the text in the image */
-    display: none; 
+/* Adds a gradient "shadow" over the sides to blur into center text on small screens */
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        rgba(17, 38, 26, 0.45) 0%, 
+        rgba(17, 38, 26, 0.92) 20%, 
+        rgba(17, 38, 26, 0.92) 80%, 
+        rgba(17, 38, 26, 0.45) 100%
+    );
+    z-index: 1;
 }
 
-/* Main Content & Section Cards */
+/* live, un-distortable banner typography */
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.banner-content h2 {
+    font-family: 'Cinzel', serif;
+    color: #ffffff;
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    border-bottom: none;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    letter-spacing: 1px;
+}
+
+.banner-content p {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #e2ede7;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.8);
+    line-height: 1.6;
+}
+
+/* Main Content Layout */
 main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    max-width: 960px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
 }
 
 section {
-    /* 90% opaque background allows the watermark to subtly show through */
-    background-color: rgba(253, 251, 247, 0.90); 
-    
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background-color: rgba(251, 249, 245, 0.94); 
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
     border-left: 5px solid var(--deep-teal);
 }
 
-/* RUBRIC ITEM: IDENTIFIER (ID) SELECTOR (#idName) */
 #gallery-section {
     border-left-color: var(--cedar-wood);
-    background-color: rgba(250, 248, 245, 0.90);
+    background-color: rgba(250, 248, 245, 0.96);
 }
 
 h2 {
     font-family: 'Cinzel', serif;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: 600;
     color: var(--forest-green);
     margin-top: 0;
     border-bottom: 2px solid var(--soft-moss);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
 }
 
 h3 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--cedar-wood);
-    margin-top: 1.5rem;
+    margin-top: 1.75rem;
     margin-bottom: 0.5rem;
 }
 
-/* Hyperlinks & Buttons */
+/* Interaction States */
 a {
     color: var(--deep-teal);
     font-weight: 600;
+    text-decoration: none;
+    transition: color 0.15s ease;
 }
 
 a:hover {
     color: var(--cedar-wood);
 }
 
-/* Call-to-Action Link Buttons */
+/* Buttons */
 section > a[href],
 .program-card a[href] {
     display: inline-block;
     background-color: var(--deep-teal);
     color: #ffffff;
-    text-decoration: none;
-    padding: 10px 18px;
+    padding: 10px 20px;
     border-radius: 4px;
     margin-right: 10px;
     margin-top: 10px;
     font-weight: 600;
-    font-size: 1.05rem;
-    transition: background-color 0.3s ease;
+    font-size: 0.95rem;
+    transition: background-color 0.15s ease, transform 0.1s ease;
 }
 
 section > a[href]:hover,
 .program-card a[href]:hover {
     background-color: var(--forest-green);
     color: #ffffff;
+    transform: translateY(-1px);
 }
 
-/* RUBRIC ITEM: SETTING WIDTH AND HEIGHT IN PERCENT (%) */
+/* Media Grid Container */
 .media-container {
     width: 100%;
-    height: 100%;
 }
 
-/* Gallery & Media Styling */
+/* Standard Images */
 section img {
     max-width: 100%;
     height: auto;
-    border-radius: 6px;
-    border: 3px solid var(--soft-moss);
-    margin-top: 0.5rem;
-}
-
-/* Footer */
-footer {
-    background-color: var(--slate-dark);
-    color: #ffffff;
-    text-align: center;
-    padding: 1.5rem 1rem;
-    margin-top: 3rem;
-    font-size: 0.95rem;
-    border-top: 4px solid var(--cedar-wood);
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Programs Grid & Card Layout Extensions */
-.programs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 1rem;
-}
-
-.program-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.program-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-}
-
-.badge {
-    display: inline-block;
-    background-color: var(--soft-moss);
-    color: var(--forest-green);
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 20px;
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
-}
-
-.highlights {
-    margin: 15px 0;
-    padding-left: 20px;
-}
-
-.highlights li {
-    margin-bottom: 6px;
-    font-size: 1rem;
-}
-
-.card-stats {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid var(--soft-moss);
-    padding-top: 12px;
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: var(--slate-dark);
-}
-
-.card-stats strong {
-    color: var(--forest-green);
-    display: block;
-    font-size: 1.1rem;
-}
-
-/* Initiatives Grid & Meta Styling Extensions */
-.initiatives-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 1rem;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 0;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-}
-
-.card-meta {
-    font-size: 0.92rem;
-    color: var(--slate-dark);
-    border-top: 1px solid var(--soft-moss);
-    padding-top: 12px;
-    margin-top: 15px;
-}
-
-.card-meta span {
-    display: block;
-    margin-bottom: 4px;
-}
-
-.card-meta strong {
-    color: var(--forest-green);
-}
-
-/* Contact Page Layout & Form Extensions */
-.contact-layout {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-top: 1rem;
-}
-
-.info-card {
-    background-color: var(--forest-green);
-    color: #ffffff;
-    border-left: 5px solid var(--cedar-wood);
-    flex: 1;
-    min-width: 280px;
-    margin-bottom: 0;
-}
-
-.info-card h2 {
-    color: #ffffff;
-    border-bottom: 2px solid var(--deep-teal);
-}
-
-.info-card p {
-    margin: 12px 0;
-}
-
-.info-card a {
-    color: #9fe2b6;
-    text-decoration: none;
-}
-
-.info-card a:hover {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-.contact-form-card {
-    flex: 2;
-    min-width: 300px;
-    margin-bottom: 0;
-}
-
-.form-group {
-    margin-bottom: 18px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: var(--forest-green);
-}
-
-.form-group input, 
-.form-group select, 
-.form-group textarea {
-    width: 100%;
-    padding: 10px 12px;
+    border-radius: 4px;
     border: 1px solid var(--soft-moss);
-    border-radius: 4px;
-    font-size: 1.05rem;
-    font-family: inherit;
-    background-color: #ffffff;
-    box-sizing: border-box;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--deep-teal);
-    box-shadow: 0 0 0 3px rgba(34, 77, 71, 0.15);
-}
-
-button[type="submit"] {
-    background-color: var(--deep-teal);
-    color: #ffffff;
-    padding: 12px 22px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: var(--forest-green);
+    margin-top: 0.5rem;
 }
 
 /* Gallery Grid Layout */
 .media-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
     width: 100%;
+    margin: 1.5rem 0;
 }
 
 .gallery-item {
@@ -420,14 +258,15 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
-    border: 2px solid var(--soft-moss);
-    border-radius: 6px;
+    border: 1px solid var(--soft-moss);
+    border-radius: 4px;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
     margin-top: 0;
     border: none;
@@ -435,49 +274,48 @@ button[type="submit"]:hover {
 }
 
 .gallery-item figcaption {
-    padding: 10px 12px;
-    font-size: 0.92rem;
-    line-height: 1.4;
+    padding: 12px;
+    font-size: 0.85rem;
+    line-height: 1.45;
     color: var(--slate-dark);
     background-color: var(--sand-light);
     border-top: 1px solid var(--soft-moss);
 }
 
-/* Team Page Grid & Profile Cards */
+/* Team Profile Cards */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+    gap: 24px;
     margin-top: 1.5rem;
 }
 
 .team-card {
     background-color: #ffffff;
-    border: 2px solid var(--soft-moss);
-    border-top: 5px solid var(--deep-teal);
-    border-radius: 8px;
+    border: 1px solid var(--soft-moss);
+    border-top: 4px solid var(--deep-teal);
+    border-radius: 4px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.02);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .team-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* Highlights the card when jumped to via #michael-paul-yaniz */
 .team-card:target {
     border-color: var(--cedar-wood);
     border-top-color: var(--cedar-wood);
-    box-shadow: 0 0 0 4px rgba(140, 83, 50, 0.2);
+    box-shadow: 0 0 0 4px rgba(140, 83, 50, 0.15);
 }
 
 .team-card img {
     width: 100%;
-    height: 260px;
+    height: 240px;
     object-fit: cover;
     margin-top: 0;
     border: none;
@@ -495,5 +333,47 @@ button[type="submit"]:hover {
 
 .team-info p {
     margin: 0;
-    font-size: 0.98rem;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--slate-dark);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    border-top: 4px solid var(--cedar-wood);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive banner logic */
+@media (max-width: 768px) {
+    .hero-banner {
+        /* On small screens, merge artwork backgrounds to keep text clear */
+        background-image: url('media/Xwemalhkwu-Homalco.png');
+        background-position: center bottom;
+        background-size: 70%; 
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 15rem; /* Pushes live text above graphic */
+    }
+    .banner-overlay {
+        background: linear-gradient(
+            180deg, 
+            rgba(17, 38, 26, 0.92) 0%, 
+            rgba(17, 38, 26, 0.92) 40%, 
+            rgba(17, 38, 26, 0.4) 100%
+        );
+    }
+    .banner-content h2 {
+        font-size: 1.75rem;
+    }
+    .banner-content p {
+        font-size: 1rem;
+    }
 }
