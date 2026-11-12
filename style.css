@@ -430,3 +430,57 @@ button[type="submit"]:hover {
     background-color: var(--sand-light);
     border-top: 1px solid var(--soft-moss);
 }
+/* Team Page Grid & Profile Cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 1.5rem;
+}
+
+.team-card {
+    background-color: #ffffff;
+    border: 2px solid var(--soft-moss);
+    border-top: 5px solid var(--deep-teal);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Highlights the card when jumped to via #michael-paul-yaniz */
+.team-card:target {
+    border-color: var(--cedar-wood);
+    border-top-color: var(--cedar-wood);
+    box-shadow: 0 0 0 4px rgba(140, 83, 50, 0.2);
+}
+
+.team-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    margin-top: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.team-info {
+    padding: 1.25rem;
+}
+
+.team-info h3 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-info p {
+    margin: 0;
+    font-size: 0.98rem;
+}
