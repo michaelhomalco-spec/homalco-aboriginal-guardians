@@ -20,9 +20,20 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color: var(--slate-dark);
-    background-color: var(--mist-gray);
     margin: 0;
     padding: 0;
+
+    background-color: var(--mist-gray);
+    
+    /* Fades out the logo using an 88% opaque white gradient */
+    background-image: 
+        linear-gradient(rgba(244, 246, 245, 0.88), rgba(244, 246, 245, 0.88)), 
+        url('media/Homalco-logo.png'); 
+        
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 70%; 
 }
 
 /* Header & Banner Styling */
@@ -114,7 +125,9 @@ main {
 }
 
 section {
-    background-color: var(--sand-light);
+    /* 90% opaque background allows the watermark to subtly show through */
+    background-color: rgba(253, 251, 247, 0.90); 
+    
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 8px;
@@ -125,7 +138,8 @@ section {
 /* RUBRIC ITEM: IDENTIFIER (ID) SELECTOR (#idName) */
 #gallery-section {
     border-left-color: var(--cedar-wood);
-    background-color: #faf8f5;
+    /* Slightly opaque to match the new watermark styling */
+    background-color: rgba(250, 248, 245, 0.90);
 }
 
 h2 {
@@ -395,6 +409,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: var(--forest-green);
 }
+
 /* Gallery Grid Layout */
 .media-container {
     display: grid;
@@ -430,6 +445,7 @@ button[type="submit"]:hover {
     background-color: var(--sand-light);
     border-top: 1px solid var(--soft-moss);
 }
+
 /* Team Page Grid & Profile Cards */
 .team-grid {
     display: grid;
