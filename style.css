@@ -89,13 +89,14 @@ nav a:hover, nav a.active {
 /* Hero Banner Container */
 .hero-banner {
     background-color: var(--forest-green);
-    /* Keeps the green gradient tint over the image */
-    background-image: linear-gradient(rgba(27, 59, 43, 0.72), rgba(27, 59, 43, 0.72)), url('media/homalco-placeholder.jpg');
+    
+    /* Adds a slight dark green tint over the fish so your white text stays readable */
+    background-image: linear-gradient(rgba(27, 59, 43, 0.75), rgba(27, 59, 43, 0.75)), url('media/Xwemalhkwu-Homalco.png');
     background-position: center;
     
-    /* Changed from 'cover' to zoom the image out and create a pattern */
-    background-size: 25%; 
-    background-repeat: repeat; 
+    /* 'contain' scales the entire artwork to fit inside the banner perfectly */
+    background-size: contain; 
+    background-repeat: no-repeat;
     
     color: #ffffff;
     padding: 4rem 1.5rem;
