@@ -505,3 +505,68 @@ footer p {
         padding-bottom: 3.5rem;
     }
 }
+/* Image Zoom / Lightbox Styles */
+.gallery-item img, 
+.team-card img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gallery-item img:hover, 
+.team-card img:hover {
+    transform: scale(1.02);
+}
+
+/* Lightbox Modal Dialog */
+#image-modal {
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    background: rgba(17, 38, 26, 0.95);
+    max-width: 90vw;
+    max-height: 90vh;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#image-modal::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal-img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 2px solid var(--soft-moss);
+}
+
+#modal-caption {
+    color: #ffffff;
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.modal-close {
+    align-self: flex-end;
+    background: var(--cedar-wood);
+    color: #ffffff;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.modal-close:hover {
+    background: var(--deep-teal);
+}
