@@ -89,19 +89,19 @@ nav a:hover, nav a.active {
 
 /* Hero Banner Container */
 .hero-banner {
-    background-color: var(--forest-green);
+    background-color: var(--forest-green); 
     
-    /* Removed the dark gradient so the true colors of the new image show */
     background-image: url('media/homalco-banner.webp');
     background-position: center;
     
-    /* Cover stretches the image to fit the banner perfectly */
-    background-size: cover; 
+    /* Changed from 'cover' to 'contain' to stop the image from cropping */
+    background-size: contain; 
     background-repeat: no-repeat;
     
     color: #ffffff;
-    /* Added more padding to make the banner taller so the image has room */
-    padding: 10rem 1.5rem; 
+    
+    /* Adjusting this padding controls the overall height of the banner */
+    padding: 12rem 1.5rem; 
     text-align: center;
     border-bottom: 4px solid var(--cedar-wood);
 }
