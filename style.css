@@ -89,11 +89,14 @@ nav a:hover, nav a.active {
 /* Hero Banner Container */
 .hero-banner {
     background-color: var(--forest-green);
-    /* Updated image URL to the homalco placeholder */
+    /* Keeps the green gradient tint over the image */
     background-image: linear-gradient(rgba(27, 59, 43, 0.72), rgba(27, 59, 43, 0.72)), url('media/homalco-placeholder.jpg');
     background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    
+    /* Changed from 'cover' to zoom the image out and create a pattern */
+    background-size: 40%; 
+    background-repeat: repeat; 
+    
     color: #ffffff;
     padding: 4rem 1.5rem;
     text-align: center;
