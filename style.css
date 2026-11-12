@@ -37,8 +37,23 @@ body {
 /* Header & Navigation Styling */
 header {
     background-color: var(--forest-green);
+    
+    /* 
+       Layer 1: Dark fade gradient to keep text readable
+       Layer 2: Left artwork
+       Layer 3: Right artwork 
+    */
+    background-image: 
+        linear-gradient(90deg, rgba(17, 38, 26, 0.2) 0%, rgba(17, 38, 26, 0.95) 15%, rgba(17, 38, 26, 0.95) 85%, rgba(17, 38, 26, 0.2) 100%),
+        url('media/homalco-banner.webp'), 
+        url('media/homalco-banner.webp');
+    background-position: center, left center, right center;
+    background-size: cover, contain, contain;
+    background-repeat: no-repeat;
+    
     color: #ffffff;
-    padding: 2rem 1rem 1.5rem;
+    /* Added slightly more padding to give the artwork breathing room */
+    padding: 2.5rem 1rem 2rem; 
     text-align: center;
     border-bottom: 5px solid var(--cedar-wood);
 }
@@ -353,6 +368,16 @@ footer p {
 
 /* Responsive banner logic */
 @media (max-width: 768px) {
+    /* Updates the header for mobile screens */
+    header {
+        background-image: 
+            linear-gradient(180deg, rgba(17, 38, 26, 0.95) 0%, rgba(17, 38, 26, 0.95) 75%, rgba(17, 38, 26, 0.2) 100%),
+            url('media/Xwemalhkwu-Homalco.png');
+        background-position: center, center bottom;
+        background-size: cover, 70%;
+        padding-bottom: 4.5rem; /* Space for the artwork under the nav links */
+    }
+
     .hero-banner {
         /* On small screens, merge artwork backgrounds to keep text clear */
         background-image: url('media/Xwemalhkwu-Homalco.png');
